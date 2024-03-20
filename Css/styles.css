@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('/img/vatten.jpg'); /* Lägg till sökväg till din bild */
+    background-size: cover; /* Visa bakgrundsbilden så att den täcker hela fönstret */
+    background-repeat: no-repeat; /* Förhindra upprepning av bakgrundsbilden */
+    background-attachment: fixed; /* Få bakgrundsbilden att vara fixerad på plats när användaren skrollar */
+    background-position: center; /* Centrera bakgrundsbilden */
+}
+
+.header {
+    text-align: center;
+    width: 20rem;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 15px;
+    background-color: #ffffff83;
+    border-radius: 20rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.username {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #fff;
+    margin-top: 15rem;
+}
+
+.time-bold {
+    font-weight: bolder;
+}
+
+.dashboard {
+    display: flex;
+    justify-content: center;
+    width: 100rem;
+    max-width: 120rem; /* Ändra bredden på behov */
+    margin: 2rem auto;
+}
+
+.quick-links {
+    background-color: #ffffffc0;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 20px; /* Avstånd mellan snabblänkar och vädermodul */
+}
+
+.quick-links.weather {
+    height: 27rem;
+    max-width: 15rem;
+    flex: 1;
+    padding: 20px;
+}
+
+.weather h3,
+.quick-links.weather h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.weather ul,
+.quick-links.weather ul {
+    list-style: none;
+    padding: 0;
+}
+
+.weather li,
+.quick-links.weather li {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.quick-links.weather a {
+    text-decoration: none;
+    color: #333;
+    margin-right: 10px;
+}
+
+/* Styla knappen "Ta bort" */
+.remove-button {
+    background-color: #ff6347; /* Korallfärg */
+    color: white;
+    border: none;
+    padding: 5px px;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right; /* Placera knappen till höger */
+   
+}
+
+/* Styla knappen "Lägg till anteckning" */
+.anteckningbtn {
+    background-color: #007bff; /* Blå färg */
+    color: #ffffff; /* Vit text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Styla knappen "Lägg till anteckning" vid hover */
+.anteckningbtn:hover {
+    background-color: #0056b3; /* Mörkare blå vid hover */
+}
+
+.nybildbtn {
+
+    background-color: #007bff; /* Blå färg */
+    color: #ffffff; /* Vit text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: fixed; /* Fäst knappen längst ner på sidan */
+    bottom: 20px;
+    left: 50%; /* Placera knappen i mitten horisontellt */
+    transform: translateX(-50%); /* Justera knappen så den är centrerad */
+    z-index: 999; /* Säkerställ att knappen visas ovanför andra element */
+
+}

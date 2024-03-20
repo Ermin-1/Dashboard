@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ermin Husic Dashboard</title>
+    <link rel="stylesheet" href="/Css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="clock">
+                <span id="time" class="time-bold">10:10</span>
+                <span id="date">1 april 2024</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="username">
+        <h1>Ermin Husic Dashboard</h1>
+    </div>
+
+    <section>
+        <div class="dashboard">
+            <ul class="quick-links weather">
+                    <h3>Snabblänkar</h3>
+        <ul>
+                <li>
+                    <a href="https://www.google.com"><img src="/img/google.png" alt="" style="max-width: 24px; max-height: 24px;"> Google</a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/"><img src="/img/chatgpt-icon.png" alt="" style="max-width: 24px; max-height: 24px;">  ChatGPT</a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/"><img src="/img/youtube.256x180.png" alt="" style="max-width: 24px; max-height: 24px;">  Youtube</a>
+                </li>
+                <li>
+                    <a href="https://music.youtube.com/"><img src="/img/youtube-round-2.256x256.png" alt="" style="max-width: 24px; max-height: 24px;">  Music</a>
+                </li>
+                <li>
+                    <a href="https://github.com/"><img src="/img/github.256x250.png" alt="" style="max-width: 24px; max-height: 24px;">  Github</a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/ermin-husic-a43864163/"><img src="/img/linkedin.256x256.png" alt="" style="max-width: 24px; max-height: 24px;"> LinkedIn</i></a>
+                </li>
+        </ul>
+            <div>
+                <button class="anteckningbtn" onclick="addQuickLink('https://example.com', 'Example')">Lägg till länk</button>
+                <button class="anteckningbtn" onclick="removeLastQuickLink()">Ta bort länk</button>
+            </div>
+        </ul>
+
+            <!--Väder-->
+            <ul class="quick-links weather">
+                <h3>Väderprognos</h3>
+                <ul id="weather-list">
+                    <!-- Väderinformationen kommer att läggas till här dynamiskt -->
+                </ul>
+            </ul>
+
+            <ul class="quick-links weather">
+                <h3>Anteckningar</h3>
+            
+                    <input type="text" id="noteInput" placeholder="Skriv din anteckning här">
+                    <button class="anteckningbtn" onclick="addNote()">Lägg till anteckning</button>
+                    <ul id="noteList"></ul>
+                
+            </ul>
+        </div>
+
+        <button class="nybildbtn" onclick="changeBackground()">Ny bakgrundsbild</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
