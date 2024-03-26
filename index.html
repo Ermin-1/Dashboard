@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="/Css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
-
 <body>
     <header>
         <div class="header">
@@ -19,39 +18,51 @@
     </header>
 
     <div class="username">
-        <h1>Ermin Husic Dashboard</h1>
+        <h1 id ="usernameDisplay" onclick="changeUsername()">Ermin Husic Dashboard</h1>
     </div>
 
     <section>
         <div class="dashboard">
             <ul class="quick-links weather">
-                    <h3>Snabblänkar</h3>
-        <ul>
-                <li>
-                    <a href="https://www.google.com"><img src="/img/google.png" alt="" style="max-width: 24px; max-height: 24px;"> Google</a>
-                </li>
-                <li>
-                    <a href="https://www.youtube.com/"><img src="/img/chatgpt-icon.png" alt="" style="max-width: 24px; max-height: 24px;">  ChatGPT</a>
-                </li>
-                <li>
-                    <a href="https://www.youtube.com/"><img src="/img/youtube.256x180.png" alt="" style="max-width: 24px; max-height: 24px;">  Youtube</a>
-                </li>
-                <li>
-                    <a href="https://music.youtube.com/"><img src="/img/youtube-round-2.256x256.png" alt="" style="max-width: 24px; max-height: 24px;">  Music</a>
-                </li>
-                <li>
-                    <a href="https://github.com/"><img src="/img/github.256x250.png" alt="" style="max-width: 24px; max-height: 24px;">  Github</a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/ermin-husic-a43864163/"><img src="/img/linkedin.256x256.png" alt="" style="max-width: 24px; max-height: 24px;"> LinkedIn</i></a>
-                </li>
-        </ul>
-            <div>
-                <button class="anteckningbtn" onclick="addQuickLink('https://example.com', 'Example')">Lägg till länk</button>
-                <button class="anteckningbtn" onclick="removeLastQuickLink()">Ta bort länk</button>
+                <h3>Snabblänkar</h3>
+                <ul id="quick-links-list">
+                    <!-- Snabblänkar kommer att läggas till här dynamiskt -->
+                    <li>
+                        <a href="https://www.google.com"><img src="/img/google.png" alt="" style="max-width: 24px; max-height: 24px;"> Google</a> <button class="removebtn">-</button>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/"><img src="/img/chatgpt-icon.png" alt="" style="max-width: 24px; max-height: 24px;">  ChatGPT</a> <button class="removebtn">-</button>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/"><img src="/img/youtube.256x180.png" alt="" style="max-width: 24px; max-height: 24px;">  Youtube</a><button class="removebtn">-</button>
+                    </li>
+                    <li>
+                        <a href="https://music.youtube.com/"><img src="/img/youtube-round-2.256x256.png" alt="" style="max-width: 24px; max-height: 24px;">  Music</a><button class="removebtn">-</button>
+                    </li>
+                    <li>
+                        <a href="https://github.com/"><img src="/img/github.256x250.png" alt="" style="max-width: 24px; max-height: 24px;">  Github</a><button class="removebtn">-</button>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/ermin-husic-a43864163/"><img src="/img/linkedin.256x256.png" alt="" style="max-width: 24px; max-height: 24px;"> LinkedIn</a><button class="removebtn">-</button>
+                    </li>
+                </ul>
+                <div>
+                    <button id="add-link-btn" class="anteckningbtn">Lägg till länk</button>
+                </div>
+            </ul>
+    
+            <!-- Modalen -->
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <input type="text" id="modal-title" placeholder="Titel">
+                    <input type="text" id="modal-url" placeholder="URL">
+                    <button onclick="addQuickLinkFromModal()">Lägg till</button>
+                </div>
             </div>
-        </ul>
 
+     
+            
             <!--Väder-->
             <ul class="quick-links weather">
                 <h3>Väderprognos</h3>
@@ -60,18 +71,25 @@
                 </ul>
             </ul>
 
+                <!-- Chuck Norris -->
+            <ul class="quick-links weather">
+                <h3>Chuck Norris Jokes</h3>
+                <ul id="chuck-norris-joke">
+                    <!-- Aktieinformation kommer att läggas till här dynamiskt -->
+                </ul>
+            </ul>
+                
+
             <ul class="quick-links weather">
                 <h3>Anteckningar</h3>
-            
-                    <input type="text" id="noteInput" placeholder="Skriv din anteckning här">
-                    <button class="anteckningbtn" onclick="addNote()">Lägg till anteckning</button>
-                    <ul id="noteList"></ul>
-                
+                <textarea id="noteInput" placeholder="Skriv din anteckning här"></textarea>
             </ul>
+        
         </div>
 
-        <button class="nybildbtn" onclick="changeBackground()">Ny bakgrundsbild</button>
+        <button class="nybildbtn" onclick="changeBackground()">Slumpa ny bakgrundsbild</button>
     </section>
+
 
     <script src="script.js"></script>
 </body>

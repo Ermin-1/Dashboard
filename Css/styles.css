@@ -1,6 +1,6 @@
+
 body {
     font-family: Arial, sans-serif;
-    background-image: url('/img/vatten.jpg'); /* Lägg till sökväg till din bild */
     background-size: cover; /* Visa bakgrundsbilden så att den täcker hela fönstret */
     background-repeat: no-repeat; /* Förhindra upprepning av bakgrundsbilden */
     background-attachment: fixed; /* Få bakgrundsbilden att vara fixerad på plats när användaren skrollar */
@@ -25,6 +25,11 @@ body {
     font-size: 2rem;
     color: #fff;
     margin-top: 15rem;
+    
+}
+
+.username h1:hover {
+    opacity: 0.7; /* Justera värdet för att ändra genomskinligheten när du hovrar över */
 }
 
 .time-bold {
@@ -95,6 +100,7 @@ body {
 /* Styla knappen "Lägg till anteckning" */
 .anteckningbtn {
     background-color: #007bff; /* Blå färg */
+ 
     color: #ffffff; /* Vit text */
     border: none;
     padding: 10px 20px;
@@ -123,3 +129,82 @@ body {
     z-index: 999; /* Säkerställ att knappen visas ovanför andra element */
 
 }
+
+
+/*  "#" används för att välja ett element med ett specifikt ID-attribut. */
+.quick-links.weather textarea#noteInput {
+    border: 1px solid #ccc; /* Ram runt textinmatningsfältet */
+    border-radius: 5px; /* Avrundade hörn för textinmatningsfältet */
+    padding: 10px; /* Utfyllnad inuti textinmatningsfältet */
+    width: 100%; /* Bredden på textinmatningsfältet */
+    height: 23rem;
+    box-sizing: border-box; /* Säkerställ att bredden inkluderar ramen och utfyllnaden */
+}
+
+.quick-links.weather textarea::placeholder {
+    text-align: center;
+}
+
+
+
+/* Modalen */
+.modal {
+    display: none; /* Dölj modalen som standard */
+    position: fixed; /* Håll modalen på plats */
+    z-index: 1; /* Lägg modalen ovanpå allt annat */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full bredd */
+    height: 100%; /* Full höjd */
+    overflow: auto; /* Aktivera rullning om det behövs */
+    background-color: rgb(0,0,0); /* Svart bakgrund med lite genomskinlighet */
+    background-color: rgba(0,0,0,0.4); /* Svart bakgrund med lite genomskinlighet */
+}
+
+/* Modalinnehåll */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% från toppen och centrerad */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Kunde vara mer eller mindre, beroende på skärmstorlek */
+}
+
+/* Stängknappen */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.removebtn {
+    float: right; /* Float the button to the right */
+background-color: white;
+    color: #796d6d;
+    border-color: #8d8d8d9a;
+    padding: 1px 6px; /* Adjusted padding */
+    cursor: pointer;
+    border-radius: 50%; /* Adjusted border radius */
+    font-size: 12px; /* Adjusted font size */
+    box-shadow: none;
+  
+
+    z-index: 1000;
+}
+
+.removebtn:hover {
+    background-color: #ff0000;
+    border-color: #ff0000;
+}
+
+
+
