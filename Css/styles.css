@@ -128,6 +128,21 @@ body {
     left: 50%; /* Placera knappen i mitten horisontellt */
     transform: translateX(-50%); /* Justera knappen så den är centrerad */
     z-index: 999; /* Säkerställ att knappen visas ovanför andra element */
+
+}
+
+/*  "#" används för att välja ett element med ett specifikt ID-attribut. */
+.dashboard-section textarea#noteInput {
+    border: 1px solid #ccc; /* Ram runt textinmatningsfältet */
+    border-radius: 5px; /* Avrundade hörn för textinmatningsfältet */
+    padding: 10px; /* Utfyllnad inuti textinmatningsfältet */
+    width: 100%; /* Bredden på textinmatningsfältet */
+    height: 23rem;
+    box-sizing: border-box; /* Säkerställ att bredden inkluderar ramen och utfyllnaden */
+}
+
+.quick-links.weather textarea::placeholder {
+    text-align: center;
 }
 
 /* Modalen */

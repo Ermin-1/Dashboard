@@ -233,7 +233,7 @@ function changeUsername() {
 const apiKey = "fcabde25a8b6494f7ac02d5dd8316f81";
 
 // URL för att hämta väderdata från OpenWeatherMap API för tre dagar framöver
-const apiUrl = `http://api.openweathermap.org/geo/1.0/reverse?lat=51.5098&lon=-0.1180&limit=5&appid=${apiKey}`;
+const apiUrl = `https://api.openweathermap.org/geo/1.0/reverse?lat=51.5098&lon=-0.1180&limit=5&appid=${apiKey}`;
 
 // Funktion för att hämta väderdata från API och uppdatera sidan
 async function fetchWeatherData() {
