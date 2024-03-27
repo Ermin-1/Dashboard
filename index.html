@@ -23,7 +23,7 @@
 
     <section>
         <div class="dashboard">
-            <ul class="quick-links weather">
+            <ul class="dashboard-section">
                 <h3>Snabblänkar</h3>
                 <ul id="quick-links-list">
                     <!-- Snabblänkar kommer att läggas till här dynamiskt -->
@@ -60,36 +60,34 @@
                     <button onclick="addQuickLinkFromModal()">Lägg till</button>
                 </div>
             </div>
-
-     
-            
-            <!--Väder-->
-            <ul class="quick-links weather">
+    
+            <!-- Väderprognos -->
+            <ul class="dashboard-section">
                 <h3>Väderprognos</h3>
                 <ul id="weather-list">
                     <!-- Väderinformationen kommer att läggas till här dynamiskt -->
                 </ul>
             </ul>
-
-                <!-- Chuck Norris -->
-            <ul class="quick-links weather">
+    
+            <!-- Chuck Norris -->
+            <ul class="dashboard-section">
                 <h3>Chuck Norris Jokes</h3>
                 <ul id="chuck-norris-joke">
-                    <!-- Aktieinformation kommer att läggas till här dynamiskt -->
+                    <!-- Jokes kommer att läggas till här dynamiskt -->
                 </ul>
             </ul>
-                
-
-            <ul class="quick-links weather">
+    
+            <!-- Anteckningar -->
+            <ul class="dashboard-section">
                 <h3>Anteckningar</h3>
                 <textarea id="noteInput" placeholder="Skriv din anteckning här"></textarea>
             </ul>
-        
+    
         </div>
-
+    
         <button class="nybildbtn" onclick="changeBackground()">Slumpa ny bakgrundsbild</button>
     </section>
-
+    
 
     <script src="script.js"></script>
 </body>
