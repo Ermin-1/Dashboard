@@ -18,6 +18,8 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+
+
 .username {
     display: flex;
     justify-content: center;
@@ -163,5 +165,64 @@ body {
 /* Modalinnehåll */
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% från toppen och centrerad */
-   
+    margin: auto; /* Centrera innehållet i flex container */
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #888;
+    margin-top: 15%;
+    width: 80%; /* Bredden på modalen */
+    max-width: 500px; /* Maxbredden på modalen för att undvika för stor bredd på stora skärmar */
+}
+
+/* Responsiovitet */
+
+@media (max-width: 600px) {
+    .header {
+        width: auto; /* Gör bredden flexibel */
+        margin: 1rem; /* Minska marginalen */
+    }
+
+    .username {
+        margin-top: 5rem; /* Minska marginalen ovanför */
+    }
+
+    .dashboard {
+        flex-direction: column; /* Stapla sektionerna vertikalt */
+        width: auto; /* Justera bredden */
+        margin: 1rem; /* Minska marginalen */
+    }
+
+    .dashboard-section {
+        max-width: auto; /* Justera bredden */
+        margin-right: 0; /* Ta bort marginalen till höger */
+        margin-bottom: 20px; /* Lägg till marginal längst ner */
+    }
+
+    .dashboard-section textarea#noteInput {
+        height: auto; /* Anpassa höjden */
+    }
+
+    .nybildbtn, .anteckningbtn {
+        width: 90%; /* Gör knapparna bredare */
+        margin: 0 auto 20px; /* Centrera och lägg till marginal längst ner */
+    }
+
+    /* Anpassa modalens position och storlek */
+    .modal-content {
+        margin: 50% auto; /* Centrera modalen bättre */
+        width: 90%; /* Justera bredden */
+    }
+}
+
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .dashboard {
+        flex-wrap: wrap; /* Tillåt innehåll att omsluta på större skärmar */
+        justify-content: space-around; /* Jämna ut utrymmet runt sektionerna */
+    }
+
+    .dashboard-section {
+        width: 45%; /* Justera bredden på dashboard-sektionerna */
+        margin-bottom: 20px; /* Lägg till marginal längst ner */
+    }
+}
