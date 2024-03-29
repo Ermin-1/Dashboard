@@ -40,7 +40,7 @@ Användningen av `LocalStorage` för att spara personlig data som anteckningar o
 
 ### Säkerhet och Sekretess
 
-Att exponera API-nycklar i frontend-koden innebär en säkerhetsrisk. Överväg att använda serverlösningar eller miljövariabler för att skydda känslig information.
+Att exponera API-nycklar i frontend-koden innebär en säkerhetsrisk. Överväg att använda serverlösningar för att skydda känslig information.
 
 ### Tillgänglighet
 
